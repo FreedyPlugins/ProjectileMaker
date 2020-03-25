@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 
 public class RemoveProjectile implements CommandExecutor {
 
-    ProjectileMaker plugin;
+    private ProjectileMaker plugin;
 
     public RemoveProjectile(ProjectileMaker plugin) {
         this.plugin = plugin;
@@ -15,7 +15,7 @@ public class RemoveProjectile implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        plugin.rempro(args[0]);
+        plugin.remPro(args[0]);
         return true;
     }
 }

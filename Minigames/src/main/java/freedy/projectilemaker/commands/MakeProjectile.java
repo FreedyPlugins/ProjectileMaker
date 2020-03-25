@@ -1,15 +1,13 @@
 package freedy.projectilemaker.commands;
 
 import freedy.projectilemaker.ProjectileMaker;
-import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.*;
 
 public class MakeProjectile implements CommandExecutor {
 
-    ProjectileMaker plugin;
+    private ProjectileMaker plugin;
 
     public MakeProjectile(ProjectileMaker plugin) {
         this.plugin = plugin;
@@ -17,7 +15,7 @@ public class MakeProjectile implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        plugin.makepro(args[0]);
+        plugin.makePro(args[0]);
         return true;
     }
 }

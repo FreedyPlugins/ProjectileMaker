@@ -8,7 +8,7 @@ import org.bukkit.entity.*;
 
 public class SaveProjectile implements CommandExecutor {
 
-    ProjectileMaker plugin;
+    private ProjectileMaker plugin;
 
     public SaveProjectile(ProjectileMaker plugin) {
         this.plugin = plugin;
@@ -20,7 +20,7 @@ public class SaveProjectile implements CommandExecutor {
             Player player = (Player) sender;
             //Location  playerloc = player.getLocation();
             if (args.length > 0) {
-                plugin.savepro(player, args[0], Double.parseDouble(args[1]), args[2]);
+                plugin.savePro(player, args[0], Double.parseDouble(args[1]), args[2]);
             }else
                 player.sendMessage("§c사용법: /savepro <발사체타입> <발사체속도> <발사체이름>\n발사체타입 목록: https://neolumia.github.io/spigot-docs/1.12.2/org/bukkit/entity/EntityType.html");
         }
